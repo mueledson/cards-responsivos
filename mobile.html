@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #00BCD4, #FFEB3B, #FF3E7F);
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px 50px;
+        }
+        .container .card{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 350px;
+            height: 350px;
+            border-radius: 20px;
+            box-shadow: 0  35px 80px rgba(0, 0, 0, 0.15);
+            background: white;
+            transition: 1s;
+        }
+        .container .card:hover{
+            height: 400px;
+            transition: 1s;
+        }
+        .container .card .img{
+            position: absolute;
+            top: 20px;
+            width: 350px;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .container .card .img img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .card .text{
+            position: absolute;
+            top: 250px;
+            width: 100%;
+            height: 35px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .text{
+            top: 150px;
+            height: 250px;
+        }
+
+        .container .card:hover .img{
+            top: -100px;
+            scale: 0.75;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+        }
+
+        .container .card .text h2{
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 3rem;
+            color: var(--cor);
+        }
+
+        .container .card:hover .text p{ color: #333; }
+    </style>
+    <title>Cards</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="--cor: #009688;">
+            <div class="img">
+                <img src="card1.png" alt="totodile">
+            </div>
+            <div class="text">
+                <h2>Chikorita</h2>
+                <p>Chikorita é o pokemon tipo grama, da segunda geração</p>
+            </div>
+        </div>
+
+        <div class="card" style="--cor: #03A9F4;">
+            <div class="img">
+                <img src="card2.jpg" alt="cyndaquil">
+            </div>
+            <div class="text">
+                <h2>Totodile</h2>
+                <p>Totodile é o pokemon tipo água, da segunda geração, também o Favoritinho dos jogadores da segunda geração</p>
+            </div>
+        </div>
+        
+        <div class="card" style="--cor: #FF3E7F;">
+            <div class="img">
+                <img src="card3.jpg" alt="chikorita">
+            </div>
+            <div class="text">
+                <h2>Cyndaquil</h2>
+                <p>Cyndaquil é o pokemon tipo fogo, da segunda geração, também bem forte por sinal </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
